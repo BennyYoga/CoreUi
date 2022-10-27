@@ -15,7 +15,7 @@
       <CIcon
         custom-class-name="sidebar-brand-full"
         :icon="logoNegative"
-        :height="35"
+        :height="50"
       />
       <CIcon
         custom-class-name="sidebar-brand-narrow"

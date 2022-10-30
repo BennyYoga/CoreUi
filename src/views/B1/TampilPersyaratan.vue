@@ -10,10 +10,6 @@
           <CCardBody>
             <form v-on:submit.prevent="PostItem">
               <div class="mb-3">
-                <CFormLabel for="exampleFormControlInput1">ID</CFormLabel>
-                <CFormInput v-model="form.id" type="text" placeholder="" aria-label="Id" />
-              </div>
-              <div class="mb-3">
                 <CFormLabel for="exampleFormControlInput1">Nama Persyaratan</CFormLabel>
                 <CFormInput v-model="form.namaPersyaratan" type="text" placeholder="" aria-label="Nama Persyaratan" />
               </div>
@@ -65,8 +61,7 @@
                 <CTableDataCell>{{ persyaratan.tipeData }}</CTableDataCell>
                 <CTableDataCell>{{ persyaratan.length }}</CTableDataCell>
                 <CTableDataCell>
-                  <CButton v-on:click="Edit(user)" color="light">Edit</CButton>
-                  <CButton v-on:click="Delete(user)" color="light">Delete</CButton>
+                  <CButton v-on:click="Edit" color="light">Edit</CButton>  <CButton v-on:click="Delete" color="light">Delete</CButton>
                 </CTableDataCell>
               </CTableRow>
             </CTableBody>
@@ -127,7 +122,7 @@ export default {
       }
     },
 
-    Edit(persyaratan) {
+    Edit : function() {
       this.updateSubmit = true;
       this.form.id = persyaratan.id;
       this.form.namaPersyaratan = persyaratan.namaPersyaratan;
@@ -135,7 +130,7 @@ export default {
 
     },
 
-    Update(form) {
+    Update : function() {
       axios
         .put(`http://localhost:3000/persyaratan/${form.id}`, {
           name: this.form.namaPersyaratan,
@@ -155,7 +150,8 @@ export default {
           alert("Error...");
         });
     },
-    Delete(persyaratan) {
+
+    Delete : function() {
       axios
         .delete("http://localhost:3000/persyaratan/" + persyaratan.id)
         .then(() => {

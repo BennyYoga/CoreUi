@@ -16,17 +16,11 @@
                   </CTableRow>
                 </CTableHead>
                 <CTableBody>
-                  <CTableRow>
-                    <CTableDataCell>user1</CTableDataCell>
-                    <CTableDataCell>Lorem Ipsum</CTableDataCell>
-                    <CTableDataCell>22/11/2002</CTableDataCell>
-                    <CTableDataCell>Event</CTableDataCell>
-                  </CTableRow>
-                  <CTableRow>
-                    <CTableDataCell>user2</CTableDataCell>
-                    <CTableDataCell>Lorem Ipsum</CTableDataCell>
-                    <CTableDataCell>22/11/2002</CTableDataCell>
-                    <CTableDataCell>Event</CTableDataCell>
+                  <CTableRow v-for="dikembalikan in dikembalikans" :key="dikembalikan.id">
+                    <CTableDataCell>{{dikembalikan.username}}</CTableDataCell>
+                    <CTableDataCell>{{dikembalikan.judul}}</CTableDataCell>
+                    <CTableDataCell>{{dikembalikan.tanggal}}</CTableDataCell>
+                    <CTableDataCell>{{dikembalikan.jenis}}</CTableDataCell>
                   </CTableRow>
                 </CTableBody>
               </CTable>
@@ -37,8 +31,39 @@
   </template>
   
   <script>
+  import axios from "axios";
   export default {
     name: 'Tables',
+    data() {
+    return {
+      form: {
+        id: "",
+        username: "",
+        judul: "",
+        tanggal: "",
+        jenis:"",
+      },
+      dikembalikans: [],
+      updateSubmit: false,
+    }
+    },
+
+    methods:{
+      getItem() {
+      axios
+        .get("http://localhost:3000/dikembalikan")
+        .then((response) => {
+          this.dikembalikans = response.data;
+          console.log(response);
+        })
+        .catch(() => {
+          alert("error");
+        });
+    },
+    },
+    mounted() {
+      this.getItem();
+    },
   }
   </script>
   

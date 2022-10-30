@@ -19,28 +19,40 @@
       "length": 255
     },
     {
-      "id": "xyz221",
-      "namaPersyaratan": "Sendal Sakti",
+      "id": 4,
+      "namaPersyaratan": "asd",
       "tipeData": "Integer",
-      "length": "225"
+      "length": "123"
     },
     {
-      "id": "2ezxc",
-      "namaPersyaratan": "Sendal Edun",
-      "tipeData": "Date",
-      "length": "12"
+      "id": 5,
+      "namaPersyaratan": "ASD",
+      "tipeData": "Integer",
+      "length": "1"
     },
     {
-      "id": "2231z",
-      "namaPersyaratan": "Sendal Kramat",
-      "tipeData": "String",
-      "length": "219"
-    },
+      "id": 6,
+      "namaPersyaratan": "asdjb",
+      "tipeData": "Integer",
+      "length": "asd1"
+    }
+  ],
+  "dikembalikan": [
     {
-      "id": "ddsq",
-      "namaPersyaratan": "Sendal Kiamat",
-      "tipeData": "String",
-      "length": "221"
+      "id": 1,
+      "username": "Miftah",
+      "judul": "Enak Nya Menjadi Programmer",
+      "tanggal": "22/11/2021",
+      "jenis": "Event"
+    }
+  ],
+  "published": [
+    {
+      "id": 1,
+      "username": "Faiz",
+      "judul": "Enak Nya Menjadi Seorang Komunis",
+      "tanggal": "22/11/2021",
+      "jenis": "Event"
     }
   ]
 }

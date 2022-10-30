@@ -1,24 +1,46 @@
 {
-    "persyaratan": [
-      {
-        "id":1,
-        "namaPersyaratan":"Alamat",
-        "tipeData":"String",
-        "length":255
-
-      },
-      {
-        "id":2,
-        "namaPersyaratan":"Tanggal Lahir",
-        "tipeData":"Date",
-        "length":"dd/mm/yyy"
-      },
-      {
-        "id":3,
-        "namaPersyaratan":"Kota",
-        "tipeData":"String",
-        "length":255
-
-      }
-    ]
-  }
+  "persyaratan": [
+    {
+      "id": 1,
+      "namaPersyaratan": "Alamat",
+      "tipeData": "String",
+      "length": 255
+    },
+    {
+      "id": 2,
+      "namaPersyaratan": "Tanggal Lahir",
+      "tipeData": "Date",
+      "length": "dd/mm/yyy"
+    },
+    {
+      "id": 3,
+      "namaPersyaratan": "Kota",
+      "tipeData": "String",
+      "length": 255
+    },
+    {
+      "id": "xyz221",
+      "namaPersyaratan": "Sendal Sakti",
+      "tipeData": "Integer",
+      "length": "225"
+    },
+    {
+      "id": "2ezxc",
+      "namaPersyaratan": "Sendal Edun",
+      "tipeData": "Date",
+      "length": "12"
+    },
+    {
+      "id": "2231z",
+      "namaPersyaratan": "Sendal Kramat",
+      "tipeData": "String",
+      "length": "219"
+    },
+    {
+      "id": "ddsq",
+      "namaPersyaratan": "Sendal Kiamat",
+      "tipeData": "String",
+      "length": "221"
+    }
+  ]
+}

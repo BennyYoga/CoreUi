@@ -1,0 +1,24 @@
+{
+    "persyaratan": [
+      {
+        "id":1,
+        "namaPersyaratan":"Alamat",
+        "tipeData":"String",
+        "length":255
+
+      },
+      {
+        "id":2,
+        "namaPersyaratan":"Tanggal Lahir",
+        "tipeData":"Date",
+        "length":"dd/mm/yyy"
+      },
+      {
+        "id":3,
+        "namaPersyaratan":"Kota",
+        "tipeData":"String",
+        "length":255
+
+      }
+    ]
+  }

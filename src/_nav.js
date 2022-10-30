@@ -3,14 +3,50 @@ export default [
     component: 'CNavItem',
     name: 'Dashboard',
     to: '/dashboard',
-    icon: 'cil-star',
+    icon: 'cil-user',
   },
   {
-    component: 'CNavItem',
-    name: 'Persyaratan',
+    component :'CNavGroup',
+    name : 'Persyaratan',
     to: '/persyaratan',
     icon: 'cil-notes',
+    items: [
+      {
+        component: 'CNavItem',
+        name: 'Tampil Persyaratan',
+        to: '/persyaratan/tampilPersyaratan',
+      },
+      {
+        component: 'CNavItem',
+        name: 'Add Persyaratan',
+        to: '/persyaratan/addPersyaratan',
+      },
+    ]
   },
+  {
+    component :'CNavGroup',
+    name : 'Artikel',
+    to: '/artikel',
+    icon: 'cil-user',
+    items: [
+      {
+        component: 'CNavItem',
+        name: 'Menunggu Review',
+        to: '/artikel/MenungguRiview',
+      },
+      {
+        component: 'CNavItem',
+        name: 'Published',
+        to: '/artikel/published',
+      },
+      {
+        component: 'CNavItem',
+        name: 'Dikembalikan',
+        to: '/artikel/dikembalikan',
+      },
+    ]
+  },
+ 
   // {
   //   component: 'CNavTitle',
   //   name: 'Theme',

@@ -13,7 +13,15 @@
               </div>
               <div class="mb-3">
                 <CFormLabel for="exampleFormControlTextarea1">Tipe Data</CFormLabel>
-                <CFormTextarea id="exampleFormControlTextarea1" rows="3"></CFormTextarea>
+                <CFormSelect
+                aria-label="Default select example"
+                :options="[
+                  'Pilih Tipe Data',
+                  { label: 'String', value: '1' },
+                  { label: 'Integer', value: '2' },
+                  { label: 'Date', value: '3'}
+                ]">
+              </CFormSelect>
               </div>
               <div class="mb-3">
                 <CFormLabel for="exampleFormControlInput1">Lenght</CFormLabel>

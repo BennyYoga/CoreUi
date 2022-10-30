@@ -20,10 +20,60 @@ const routes = [
           import(/* webpackChunkName: "dashboard" */ '@/views/Dashboard.vue'),
       },
       {
+        path: '/editor',
+        name: 'Editor',
+        component: () => import('@/views/B1/Editor.vue'),
+      },
+      {
         path: '/persyaratan',
         name: 'Persyaratan',
-        component: () => import('@/views/B1/Persyaratan.vue'),
-      },
+        component: {
+          render() {
+            return h(resolveComponent('router-view'))
+          },
+        },
+        redirect: '/persyaratan',
+        children: [
+          {
+            path: '/persyaratan/tampilPersyaratan',
+            name: 'Tampil Persyaratan',
+            component: () => import('@/views/B1/TampilPersyaratan.vue'),
+          },
+          {
+            path: '/persyaratan/addPersyaratan',
+            name: 'Add Persyaratan',
+            component: () => import('@/views/B1/AddPersyaratan.vue'),
+          },
+        ]
+      },  
+      {
+        path: '/artikel',
+        name: 'Artikel',
+        component: {
+          render() {
+            return h(resolveComponent('router-view'))
+          },
+        },
+        redirect: '/artikel',
+        children: [
+          {
+            path: '/artikel/MenungguRiview',
+            name: 'Menunggu Review',
+            component: () => import('@/views/B1/Published.vue'),
+          },
+          {
+            path: '/artikel/published',
+            name: 'Published',
+            component: () => import('@/views/B1/Published.vue'),
+          },
+          {
+            path: '/artikel/dikembalikan',
+            name: 'Dikembalikan',
+            component: () => import('@/views/B1/Dikembalikan.vue'),
+          },
+        ]
+      },  
+
       {
         path: '/theme',
         name: 'Theme',

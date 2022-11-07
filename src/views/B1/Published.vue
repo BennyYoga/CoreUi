@@ -57,7 +57,7 @@ export default {
         console.log(response);
       })
       .catch(() => {
-        alert("error");
+        alert("Data nya gak ada bos");
       });
   },
   },

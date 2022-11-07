@@ -9,19 +9,22 @@
               <CTable>
                 <CTableHead>
                   <CTableRow>
-                    <CTableHeaderCell scope="col">Username</CTableHeaderCell>
+                    <CTableHeaderCell scope="col">ID</CTableHeaderCell>
                     <CTableHeaderCell scope="col">Judul</CTableHeaderCell>
-                    <CTableHeaderCell scope="col">Tanggal Publish</CTableHeaderCell>
-                    <CTableHeaderCell scope="col">Jenis Artikel</CTableHeaderCell>
+                    <CTableHeaderCell scope="col">Deskripsi</CTableHeaderCell>
+                    <CTableHeaderCell scope="col">Waktu Terbit</CTableHeaderCell>
                   </CTableRow>
                 </CTableHead>
                 <CTableBody>
-                  <CTableRow v-for="dikembalikan in dikembalikans" :key="dikembalikan.id">
-                    <CTableDataCell>{{dikembalikan.username}}</CTableDataCell>
-                    <CTableDataCell>{{dikembalikan.judul}}</CTableDataCell>
-                    <CTableDataCell>{{dikembalikan.tanggal}}</CTableDataCell>
-                    <CTableDataCell>{{dikembalikan.jenis}}</CTableDataCell>
-                  </CTableRow>
+                  <CTableRow v-for="dikembalikan in dikembalikans" :key="dikembalikan.id_status_artikel">
+                    <CTableDataCell>{{dikembalikan.id_artikel}}</CTableDataCell>
+                    <CTableDataCell>{{dikembalikan.judul_artikel}}</CTableDataCell>
+                    <CTableDataCell>{{dikembalikan.deskripsi_artikel}}</CTableDataCell>
+                    <CTableDataCell>{{dikembalikan.waktu_terbit}}</CTableDataCell>
+                    <CTableDataCell>
+                      <CButton v-on:click="Edit(persyaratan.id)" color="light">Tolak</CButton> <CButton v-on:click="Delete(persyaratan.id_persyaratan)" color="light">Terima</CButton>
+                    </CTableDataCell>
+                    </CTableRow>
                 </CTableBody>
               </CTable>
           </CCardBody>
@@ -37,11 +40,14 @@
     data() {
     return {
       form: {
-        id: "",
-        username: "",
-        judul: "",
-        tanggal: "",
-        jenis:"",
+        id_artikel: "",
+        id_user: "",
+        id_status_artikel: "",
+        id_tag: "",
+        deskripsi_artikel:"",
+        isi_artikel:"",
+        judul_artikel:"",
+        waktu_terbit:"",
       },
       dikembalikans: [],
       updateSubmit: false,
@@ -51,7 +57,7 @@
     methods:{
       getItem() {
       axios
-        .get("http://localhost:3000/dikembalikan")
+        .get("http://localhost:3010/artikel/editor/inreview")
         .then((response) => {
           this.dikembalikans = response.data;
           console.log(response);

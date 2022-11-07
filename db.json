@@ -1,40 +1,16 @@
 {
   "persyaratan": [
     {
-      "id": 1,
-      "namaPersyaratan": "Alamat",
-      "tipeData": "String",
-      "length": 255
-    },
-    {
-      "id": 2,
-      "namaPersyaratan": "Tanggal Lahir",
-      "tipeData": "Date",
-      "length": "dd/mm/yyy"
-    },
-    {
-      "id": 3,
-      "namaPersyaratan": "Kota",
-      "tipeData": "String",
-      "length": 255
-    },
-    {
-      "id": 4,
-      "namaPersyaratan": "asd",
-      "tipeData": "Integer",
-      "length": "123"
-    },
-    {
       "id": 5,
-      "namaPersyaratan": "ASD",
-      "tipeData": "Integer",
-      "length": "1"
+      "namaPersyaratan": "Nama",
+      "tipeData": "String",
+      "length": "255"
     },
     {
       "id": 6,
-      "namaPersyaratan": "asdjb",
-      "tipeData": "Integer",
-      "length": "asd1"
+      "namaPersyaratan": "Tanggal Lahir",
+      "tipeData": "Date",
+      "length": "dd/mm/yyy"
     }
   ],
   "dikembalikan": [

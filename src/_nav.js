@@ -16,11 +16,11 @@ export default [
         name: 'Tampil Persyaratan',
         to: '/persyaratan/tampilPersyaratan',
       },
-      {
-        component: 'CNavItem',
-        name: 'Add Persyaratan',
-        to: '/persyaratan/addPersyaratan',
-      },
+      // {
+      //   component: 'CNavItem',
+      //   name: 'Add Persyaratan',
+      //   to: '/persyaratan/addPersyaratan',
+      // },
     ]
   },
   {

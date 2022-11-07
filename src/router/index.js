@@ -59,7 +59,7 @@ const routes = [
           {
             path: '/artikel/MenungguRiview',
             name: 'Menunggu Review',
-            component: () => import('@/views/B1/Published.vue'),
+            component: () => import('@/views/B1/Dikembalikan.vue'),
           },
           {
             path: '/artikel/published',
